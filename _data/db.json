@@ -7,7 +7,8 @@
         "date_of_birth": "1980-05-15",
         "monthly_net_salary": 5000.00,
         "unique_account_number": "ACCT123456",
-        "overdraft_status": false
+        "overdraft_status": false,
+        "principal_balance":200.00
       },
       {
         "id": "3f2504e1-4f89-11eb-8b6e-0800200c9a66",
@@ -16,7 +17,8 @@
         "date_of_birth": "1992-09-20",
         "monthly_net_salary": 3500.00,
         "unique_account_number": "ACCT654321",
-        "overdraft_status": true
+        "overdraft_status": true,
+        "principal_balance":300.00
       },
       {
         "id": "3f2504e2-4f89-11eb-8b6e-0800200c9a66",
@@ -25,7 +27,8 @@
         "date_of_birth": "1985-12-10",
         "monthly_net_salary": 6000.00,
         "unique_account_number": "ACCT987654",
-        "overdraft_status": false
+        "overdraft_status": false ,
+        "principal_balance":500.00
       },
       {
         "id": "3f2504e3-4f89-11eb-8b6e-0800200c9a66",
@@ -34,7 +37,8 @@
         "date_of_birth": "1998-07-25",
         "monthly_net_salary": 4200.00,
         "unique_account_number": "ACCT246810",
-        "overdraft_status": true
+        "overdraft_status": true ,
+        "principal_balance":600.00
       },
       {
         "id": "3f2504e4-4f89-11eb-8b6e-0800200c9a66",
@@ -43,7 +47,8 @@
         "date_of_birth": "1976-03-05",
         "monthly_net_salary": 5500.00,
         "unique_account_number": "ACCT135790",
-        "overdraft_status": false
+        "overdraft_status": false ,
+        "principal_balance":700.00
       }
     ]
   }

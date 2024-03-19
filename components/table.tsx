@@ -9,7 +9,8 @@ interface Account {
     date_of_birth: Date,
     monthly_net_salary: number,
     unique_account_number: string,
-    overdraft_status: boolean
+    overdraft_status: boolean,
+    principal_balance:number
 }
 
 function useGetAccount() {
@@ -60,7 +61,10 @@ export default function TableAccount() {
                             Net salary month 
                         </th>
                         <th scope="col" className="px-6 py-3">
-                        unique_account_number 
+                        Unique account number 
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                        Principal Balance
                         </th>
                         <th scope="col" className="px-6 py-3">
                             Update  
@@ -76,6 +80,7 @@ export default function TableAccount() {
                             <td className="px-6 py-4">{new Date(account.date_of_birth).toLocaleDateString()}</td>
                             <td className="px-6 py-4">${account.monthly_net_salary}</td>
                             <td className="px-6 py-4">${account.unique_account_number}</td>
+                            <td className="px-6 py-4">${account.principal_balance}</td>
                             <td className="px-6 py-4">
                                 <a href="">
                                     <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
