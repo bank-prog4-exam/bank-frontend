@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "../../components";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,8 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
       <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
       <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+      </head>
       <body className={inter.className}>
         <Sidebar/>
         <div className="p-4 sm:ml-64">
