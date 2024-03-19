@@ -8,7 +8,9 @@ module.exports = {
     "./public/**/*.html",
   ],
   plugins: [
-    require("flowbite/plugin")
+    require('flowbite/plugin')({
+      charts: true,
+  })
   ],
   theme: {},
 };

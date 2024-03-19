@@ -79,7 +79,7 @@ export default function TableAccount() {
                             <td className="px-6 py-4">{account.first_name}</td>
                             <td className="px-6 py-4">{new Date(account.date_of_birth).toLocaleDateString()}</td>
                             <td className="px-6 py-4">${account.monthly_net_salary}</td>
-                            <td className="px-6 py-4">${account.unique_account_number}</td>
+                            <td className="px-6 py-4">{account.unique_account_number}</td>
                             <td className="px-6 py-4">${account.principal_balance}</td>
                             <td className="px-6 py-4">
                                 <a href="">
