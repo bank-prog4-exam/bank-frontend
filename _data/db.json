@@ -1,0 +1,50 @@
+{
+    "accounts": [
+      {
+        "id": "3f2504e0-4f89-11eb-8b6e-0800200c9a66",
+        "last_name": "Smith",
+        "first_name": "John",
+        "date_of_birth": "1980-05-15",
+        "monthly_net_salary": 5000.00,
+        "unique_account_number": "ACCT123456",
+        "overdraft_status": false
+      },
+      {
+        "id": "3f2504e1-4f89-11eb-8b6e-0800200c9a66",
+        "last_name": "Johnson",
+        "first_name": "Emily",
+        "date_of_birth": "1992-09-20",
+        "monthly_net_salary": 3500.00,
+        "unique_account_number": "ACCT654321",
+        "overdraft_status": true
+      },
+      {
+        "id": "3f2504e2-4f89-11eb-8b6e-0800200c9a66",
+        "last_name": "Brown",
+        "first_name": "Michael",
+        "date_of_birth": "1985-12-10",
+        "monthly_net_salary": 6000.00,
+        "unique_account_number": "ACCT987654",
+        "overdraft_status": false
+      },
+      {
+        "id": "3f2504e3-4f89-11eb-8b6e-0800200c9a66",
+        "last_name": "Williams",
+        "first_name": "Jessica",
+        "date_of_birth": "1998-07-25",
+        "monthly_net_salary": 4200.00,
+        "unique_account_number": "ACCT246810",
+        "overdraft_status": true
+      },
+      {
+        "id": "3f2504e4-4f89-11eb-8b6e-0800200c9a66",
+        "last_name": "Jones",
+        "first_name": "David",
+        "date_of_birth": "1976-03-05",
+        "monthly_net_salary": 5500.00,
+        "unique_account_number": "ACCT135790",
+        "overdraft_status": false
+      }
+    ]
+  }
+  
