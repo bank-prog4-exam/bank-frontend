@@ -21,11 +21,23 @@ export default function RootLayout({
       <head>
       <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
       <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+      <style>{`
+        .scrollable-container::-webkit-scrollbar {
+          width: 0px;
+          background: transparent;
+        }
+        .scrollable-container {
+          -ms-overflow-style: none; 
+          scrollbar-width: none; 
+          overflow-y: auto;
+          max-height: calc(100vh - 100px);
+        }
+      `}</style>
       </head>
       <body className={inter.className}>
         <Sidebar/>
         <div className="p-4 sm:ml-64">
-            <div className="p-4 border-gray-200 border-dashed rounded-lg dark:border-gray-700" style={{ overflowY: 'auto', maxHeight: 'calc(100vh - 100px)' }}>
+            <div className=" mt-16 p-4 border-gray-200 border-dashed rounded-lg dark:border-gray-700 scrollable-container">
               {children}
             </div>
         </div>
