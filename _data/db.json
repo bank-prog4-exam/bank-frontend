@@ -97,6 +97,69 @@
             "effective_date": "2024-03-16T11:00:00Z",
             "registration_date": "2024-03-16T11:00:00Z"
           }
+    ] ,
+    "transfers":[
+      {
+        "id": "62745e29-4d26-4a15-b38e-80b4f2b16e94",
+        "id_sender_account": "3f2504e0-4f89-11eb-8b6e-0800200c9a66",
+        "id_receiver_account": "3f2504e1-4f89-11eb-8b6e-0800200c9a66",
+        "transfer_amount": 75.00,
+        "reason": "Remboursement de prêt",
+        "effective_date": "2024-03-19T10:00:00Z",
+        "registration_date": "2024-03-19T10:00:00Z",
+        "status": "Pending",
+        "reference": "TRF789012",
+        "label": "Remboursement"
+      },
+      {
+        "id": "daa77f81-2953-49b4-9b95-0c53a9e46d4d",
+        "id_sender_account": "3f2504e2-4f89-11eb-8b6e-0800200c9a66",
+        "id_receiver_account": "3f2504e3-4f89-11eb-8b6e-0800200c9a66",
+        "transfer_amount": 250.00,
+        "reason": "Cadeau d'anniversaire",
+        "effective_date": "2024-03-21T11:30:00Z",
+        "registration_date": "2024-03-21T11:30:00Z",
+        "status": "Pending",
+        "reference": "TRF456789",
+        "label": "Cadeau"
+      },
+      {
+        "id": "8f2f1b70-51c2-40a7-a4db-7eef0c74785e",
+        "id_sender_account": "3f2504e3-4f89-11eb-8b6e-0800200c9a66",
+        "id_receiver_account": "3f2504e4-4f89-11eb-8b6e-0800200c9a66",
+        "transfer_amount": 120.00,
+        "reason": "Remboursement d'emprunt",
+        "effective_date": "2024-03-22T14:00:00Z",
+        "registration_date": "2024-03-22T14:00:00Z",
+        "status": "Pending",
+        "reference": "TRF234567",
+        "label": "Remboursement"
+      },
+      {
+        "id": "67b8c184-7b3a-4a3a-bd78-1294d1979db5",
+        "id_sender_account": "3f2504e4-4f89-11eb-8b6e-0800200c9a66",
+        "id_receiver_account": "3f2504e1-4f89-11eb-8b6e-0800200c9a66",
+        "transfer_amount": 50.00,
+        "reason": "Cadeau de remerciement",
+        "effective_date": "2024-03-23T16:30:00Z",
+        "registration_date": "2024-03-23T16:30:00Z",
+        "status": "Pending",
+        "reference": "TRF345678",
+        "label": "Cadeau"
+      },
+      {
+        "id": "01bfeaac-80f7-4058-8b9e-74e74757ab89",
+        "id_sender_account": "3f2504e1-4f89-11eb-8b6e-0800200c9a66",
+        "id_receiver_account": "3f2504e0-4f89-11eb-8b6e-0800200c9a66",
+        "transfer_amount": 30.00,
+        "reason": "Remboursement de prêt",
+        "effective_date": "2024-03-24T09:00:00Z",
+        "registration_date": "2024-03-24T09:00:00Z",
+        "status": "Pending",
+        "reference": "TRF567890",
+        "label": "Remboursement"
+      }
+                      
     ]
   }
   
