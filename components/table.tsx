@@ -13,7 +13,7 @@ interface Account {
     principal_balance:number
 }
 
-function useGetAccount() {
+export function useGetAccount() {
     const [accounts, setAccounts] = useState<Account[]>([]);
 
     useEffect(() => {
