@@ -1,5 +1,10 @@
 import React from "react";
+import { NavTransaction } from "../../../components/transaction";
+import TableTransaction from "../../../components/transaction/transactionList";
 
-export function Transaction() {
-    return <h1>Page transaction</h1>
+export default function Transaction() {
+    return <>
+    <NavTransaction/>
+    <TableTransaction/>
+    </>
 }

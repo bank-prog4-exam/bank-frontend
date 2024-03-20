@@ -50,6 +50,53 @@
         "overdraft_status": false ,
         "principal_balance":700.00
       }
+    ]  ,
+    "transactions":[
+          {
+            "id": "5e7a1bc3-1975-43a9-a1d5-90febc53398c",
+            "id_account": "3f2504e0-4f89-11eb-8b6e-0800200c9a66",
+            "transaction_amount": 100.00,
+            "transaction_type": "Deposit",
+            "reason": "Income from freelance work",
+            "effective_date": "2024-03-15T10:30:00Z",
+            "registration_date": "2024-03-15T10:30:00Z"
+          },
+          {
+            "id": "6f8e32ba-2c6c-488e-bad8-fa0c3a5d7fd5",
+            "id_account": "3f2504e1-4f89-11eb-8b6e-0800200c9a66",
+            "transaction_amount": -50.00,
+            "transaction_type": "Withdrawal",
+            "reason": "Grocery expenses",
+            "effective_date": "2024-03-17T14:45:00Z",
+            "registration_date": "2024-03-17T14:45:00Z"
+          },
+          {
+            "id": "a7f02c5e-1f59-4f52-a461-9b1254c69d54",
+            "id_account": "3f2504e2-4f89-11eb-8b6e-0800200c9a66",
+            "transaction_amount": 200.00,
+            "transaction_type": "Deposit",
+            "reason": "Salary",
+            "effective_date": "2024-03-15T09:00:00Z",
+            "registration_date": "2024-03-15T09:00:00Z"
+          },
+          {
+            "id": "b5e6f9a3-9e94-4ae2-b7ee-dad121d6b431",
+            "id_account": "3f2504e3-4f89-11eb-8b6e-0800200c9a66",
+            "transaction_amount": -80.00,
+            "transaction_type": "Withdrawal",
+            "reason": "Dining out",
+            "effective_date": "2024-03-18T19:20:00Z",
+            "registration_date": "2024-03-18T19:20:00Z"
+          },
+          {
+            "id": "c3e8f2d4-8711-45ee-aa45-4653d9b2b491",
+            "id_account": "3f2504e4-4f89-11eb-8b6e-0800200c9a66",
+            "transaction_amount": 300.00,
+            "transaction_type": "Deposit",
+            "reason": "Bonus",
+            "effective_date": "2024-03-16T11:00:00Z",
+            "registration_date": "2024-03-16T11:00:00Z"
+          }
     ]
   }
   

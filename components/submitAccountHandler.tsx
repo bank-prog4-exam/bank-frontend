@@ -25,7 +25,7 @@ export function RegisterAccount() {
         const router = useRouter();
         e.preventDefault();
         console.log(formData);
-        // Ajoutez ici la logique pour soumettre les données à votre backend, par exemple.
+        // Ajoutez ici la logique pour soumettre les données .
         
         router.push('/accounts')
     };
