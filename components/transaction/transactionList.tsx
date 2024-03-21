@@ -4,12 +4,12 @@ import 'tailwindcss/tailwind.css';
 
 interface Transaction {
     id: string,
-    id_account: string,
-    transaction_amount: number,
-    transaction_type: string,
+    idAccount: string,
+    transactionAmount: number,
+    transactionType: string,
     reason: string,
-    effective_date: Date,
-    registration_date: Date
+    effectiveDate: Date,
+    registrationDate: Date
 }
 
 function useGetTransactions() {
@@ -18,7 +18,7 @@ function useGetTransactions() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:8080/transactions');
+                const response = await fetch('http://localhost:8080/all_transactions');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -73,12 +73,12 @@ export default function TableTransaction() {
                     {data.map(transaction => (
                         <tr key={transaction.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <td className="px-6 py-4">{transaction.id}</td>
-                            <td className="px-6 py-4">{transaction.id_account}</td>
-                            <td className="px-6 py-4">{transaction.transaction_amount}</td>
-                            <td className="px-6 py-4">{transaction.transaction_type}</td>
+                            <td className="px-6 py-4">{transaction.idAccount}</td>
+                            <td className="px-6 py-4">{transaction.transactionAmount}</td>
+                            <td className="px-6 py-4">{transaction.transactionType}</td>
                             <td className="px-6 py-4">{transaction.reason}</td>
-                            <td className="px-6 py-4">{new Date(transaction.effective_date).toLocaleString()}</td>
-                            <td className="px-6 py-4">{new Date(transaction.registration_date).toLocaleString()}</td>
+                            <td className="px-6 py-4">{new Date(transaction.effectiveDate).toLocaleString()}</td>
+                            <td className="px-6 py-4">{new Date(transaction.registrationDate).toLocaleString()}</td>
                             <td className="px-6 py-4">
                                 <a href="">
                                     <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
