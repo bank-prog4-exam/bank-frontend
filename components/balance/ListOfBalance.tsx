@@ -40,8 +40,8 @@ export function ListBalance() {
                 <tbody>
                     {accounts.map(account => (
                         <tr key={account.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                            <td className="px-6 py-4">{account.unique_account_number}</td>
-                            <td className="px-6 py-4">${account.principal_balance}</td>
+                            <td className="px-6 py-4">{account.uniqueAccountNumber}</td>
+                            <td className="px-6 py-4">${account.principalBalance}</td>
                             <td className="px-6 py-4">${0}</td>
                             <td className="px-6 py-4">${0}</td>
                             <td className="px-6 py-4">{selectedDate.toLocaleDateString()}</td>

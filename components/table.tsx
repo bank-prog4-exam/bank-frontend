@@ -4,13 +4,13 @@ import 'tailwindcss/tailwind.css';
 
 interface Account {
     id: string,
-    last_name: string,
-    first_name: string,
-    date_of_birth: Date,
-    monthly_net_salary: number,
-    unique_account_number: string,
-    overdraft_status: boolean,
-    principal_balance:number
+    lastName: string,
+    firstName: string,
+    dateOfBirth: Date,
+    monthlyNetSalary: number,
+    uniqueAccountNumber: string,
+    overdraftStatus: boolean,
+    principalBalance:number
 }
 
 export function useGetAccount() {
@@ -19,7 +19,7 @@ export function useGetAccount() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:8080/accounts');
+                const response = await fetch('http://localhost:8080/all_accounts');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -74,13 +74,13 @@ export default function TableAccount() {
                 <tbody>
                  {data.map(account => (
                         <tr key={account.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                            <td className="px-6 py-4">{account.unique_account_number}</td>
-                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{account.last_name}</td>
-                            <td className="px-6 py-4">{account.first_name}</td>
-                            <td className="px-6 py-4">{new Date(account.date_of_birth).toLocaleDateString()}</td>
-                            <td className="px-6 py-4">${account.monthly_net_salary}</td>
-                            <td className="px-6 py-4">{account.unique_account_number}</td>
-                            <td className="px-6 py-4">${account.principal_balance}</td>
+                            <td className="px-6 py-4">{account.id}</td>
+                            <td className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{account.lastName}</td>
+                            <td className="px-6 py-4">{account.firstName}</td>
+                            <td className="px-6 py-4">{new Date(account.dateOfBirth).toLocaleDateString()}</td>
+                            <td className="px-6 py-4">${account.monthlyNetSalary}</td>
+                            <td className="px-6 py-4">{account.uniqueAccountNumber}</td>
+                            <td className="px-6 py-4">${account.principalBalance}</td>
                             <td className="px-6 py-4">
                                 <a href="">
                                     <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">

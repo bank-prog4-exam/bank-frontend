@@ -43,7 +43,7 @@ export function RegisterTransfer() {
                 <select name="id_sender_account" value={formData.id_sender_account} onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <option value="">Select Sender Account</option>
                     {accounts.map(account => (
-                        <option key={account.id} value={account.id}>{`${account.last_name} ${account.first_name}`}</option>
+                        <option key={account.id} value={account.id}>{`${account.lastName} ${account.firstName}`}</option>
                     ))}
                 </select>
             </label>
@@ -52,7 +52,7 @@ export function RegisterTransfer() {
                 <select name="id_receiver_account" value={formData.id_receiver_account} onChange={handleChange} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     <option value="">Select Receiver Account</option>
                     {accounts.map(account => (
-                        <option key={account.id} value={account.id}>{`${account.last_name} ${account.first_name}`}</option>
+                        <option key={account.id} value={account.id}>{`${account.lastName} ${account.firstName}`}</option>
                     ))}
                 </select>
             </label>
