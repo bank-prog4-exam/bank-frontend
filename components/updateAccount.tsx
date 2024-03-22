@@ -1,8 +1,16 @@
 "use client"
 import React from "react";
-import { useUserId } from "./contextAccount";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useUrl } from 'nextjs-current-url';
+import { Metadata } from 'next';
+import { redirect } from 'next/navigation'
+ 
 
+
+export const metadata: Metadata = {
+    title: 'Next.js - Coding Beauty',
+    description: 'Next.js Tutorials by Coding Beauty',
+  };
 
 interface FormValues {
     id: string;
@@ -17,13 +25,12 @@ interface FormValues {
 
 export function UpdateAccount() {
     const { register, handleSubmit } = useForm<FormValues>();
-    const { userId } = useUserId();
+    const { pathname} = useUrl() ?? {};
+    const id = pathname ? pathname.substring(1) : "";
+    
     const onSubmit: SubmitHandler<FormValues> = async (data) => {
         try {
-            const updatedFormData = { ...data, userId };
-
-            console.log("FormData:", updatedFormData);
-
+            const updatedFormData = { ...data, id };
             const response = await fetch('http://localhost:8080/new_account', {
                 method: 'POST',
                 headers: {
@@ -35,8 +42,9 @@ export function UpdateAccount() {
             if (!response.ok) {
                 throw new Error('Failed to add account');
             }
-
-            alert('Account added successfully!');
+              
+            alert('Update account successfully!');
+            redirect('/account')
             
         } catch (error) {
             console.error('Error adding account:', error);
@@ -70,7 +78,9 @@ export function UpdateAccount() {
             <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                 <input type="number" {...register("principalBalance")} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Principal balance"  />
             </label>
-            <input type="submit" value="Register" className="btn btn-primary" />
+            <a href="/account" >
+            <input type="submit" value="Register" className="btn btn-primary mt-2" />   
+            </a> 
         </form>
     );
 }
