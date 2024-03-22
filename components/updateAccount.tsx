@@ -3,8 +3,7 @@ import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useUrl } from 'nextjs-current-url';
 import { Metadata } from 'next';
-import { redirect } from 'next/navigation'
- 
+
 
 
 export const metadata: Metadata = {
@@ -26,7 +25,7 @@ interface FormValues {
 export function UpdateAccount() {
     const { register, handleSubmit } = useForm<FormValues>();
     const { pathname} = useUrl() ?? {};
-    const id = pathname ? pathname.substring(1) : "";
+    const id = pathname ? pathname.substring(9) : "";
     
     const onSubmit: SubmitHandler<FormValues> = async (data) => {
         try {
@@ -44,7 +43,7 @@ export function UpdateAccount() {
             }
               
             alert('Update account successfully!');
-            redirect('/account')
+          
             
         } catch (error) {
             console.error('Error adding account:', error);
@@ -79,7 +78,7 @@ export function UpdateAccount() {
                 <input type="number" {...register("principalBalance")} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Principal balance"  />
             </label>
             <a href="/account" >
-            <input type="submit" value="Register" className="btn btn-primary mt-2" />   
+            <input type="submit" value="Update" className="btn btn-primary mt-2" />   
             </a> 
         </form>
     );

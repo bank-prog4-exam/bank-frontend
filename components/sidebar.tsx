@@ -6,7 +6,32 @@ export function Sidebar() {
    <section className="sticky top-0 z-50">
    <nav className="bg-gray-50  border-gray-200 dark:bg-gray-900  border-gray-300 ">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <img src="logoB.png" className="h-16 w-auto" alt="Flowbite Logo" />
+      <div className="flex items-center">
+      <svg
+        className="w-10 h-10 mr-2 text-blue-500"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M12 2c-1.95 0-3.74.72-5.13 1.91A8.98 8.98 0 003 11c0 4.97 4.03 9 9 9s9-4.03 9-9c0-2.09-.72-4-1.91-5.49A8.957 8.957 0 0012 2z"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
+        />
+      </svg>
+      <div>
+        <span className="text-lg font-bold text-red-500">Bank</span>
+        <span className="text-lg font-bold text-blue-500">-mad</span>
+      </div>
+    </div>
+
         <div className="flex md:order-2">
           <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" className="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
             <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
