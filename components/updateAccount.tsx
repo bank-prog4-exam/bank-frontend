@@ -20,6 +20,7 @@ interface FormValues {
     uniqueAccountNumber: string;
     overdraftStatus: string;
     principalBalance: number;
+    lastOverdraftActivity: string;
 }
 
 export function UpdateAccount() {
@@ -76,6 +77,9 @@ export function UpdateAccount() {
             </label>
             <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                 <input type="number" {...register("principalBalance")} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Principal balance"  />
+            </label>
+            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                <input type="datetime-local" {...register("lastOverdraftActivity")} placeholder="Last Overdraft Activity" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"   />
             </label>
             <a href="/account" >
             <input type="submit" value="Update" className="btn btn-primary mt-2" />   

@@ -12,7 +12,7 @@ interface Transaction {
     registrationDate: Date
 }
 
-function useGetTransactions() {
+export function useGetTransactions() {
     const [transactions, setTransactions] = useState<Transaction[]>([]);
 
     useEffect(() => {

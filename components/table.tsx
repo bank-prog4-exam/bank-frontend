@@ -12,7 +12,8 @@ interface Account {
     monthlyNetSalary: number,
     uniqueAccountNumber: string,
     overdraftStatus: boolean,
-    principalBalance: number
+    principalBalance: number,
+    lastOverdraftActivity: string
 }
 
 export function useGetAccount() {
@@ -69,6 +70,9 @@ export default function TableAccount() {
                             Principal Balance
                         </th>
                         <th scope="col" className="px-6 py-3">
+                            overdraft 
+                        </th>
+                        <th scope="col" className="px-6 py-3">
                             Update
                         </th>
                     </tr>
@@ -83,6 +87,7 @@ export default function TableAccount() {
                             <td className="px-6 py-4">${account.monthlyNetSalary}</td>
                             <td className="px-6 py-4">{account.uniqueAccountNumber}</td>
                             <td className="px-6 py-4">${account.principalBalance}</td>
+                            <td className="px-6 py-4">${account.lastOverdraftActivity}</td>
                             <td className="px-6 py-4">
                                 <button >
                                     <a href={`/account/${account.id}`}>

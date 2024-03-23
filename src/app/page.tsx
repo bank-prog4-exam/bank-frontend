@@ -1,7 +1,20 @@
+"use client"
 import 'tailwindcss/tailwind.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useGetAccount } from '../../components';
+import { useGetTransactions } from '../../components/transaction';
 
 export default function Home() {
+  const accounts = useGetAccount();
+  const transactions = useGetTransactions();
+  const [totalAccounts, setTotalAccounts] = useState(0);
+  const [totalTransactions, setTotalTransactions] = useState(0);
+
+  useEffect(() => {
+    setTotalAccounts(accounts.length);
+    setTotalTransactions(transactions.length);
+  }, [accounts, transactions]);
+
   return (
     <>
     <section className='justify-center'>
@@ -11,12 +24,12 @@ export default function Home() {
             <br />
             <h2 className="card-title">Total account  </h2>
             <br />
-            <h1 className='text-5xl text-gray-900 dark:text-white '>{5}</h1>
+            <h1 className='text-5xl text-gray-900 dark:text-white '>{totalAccounts}</h1>
             <hr className='text-blue-400'/>
             <br />
             <h2 className="card-title">Total Transaction </h2>
             <br />
-            <h1 className='text-5xl text-gray-900 dark:text-white'>{10}</h1>
+            <h1 className='text-5xl text-gray-900 dark:text-white'>{totalTransactions}</h1>
             <hr className='text-blue-400'/>
           </div>
         </div>
