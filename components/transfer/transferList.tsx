@@ -90,7 +90,7 @@ export default function TableTransfer() {
                             Label
                         </th>
                         <th scope="col" className="px-6 py-3">
-                            Update
+                            Cancel
                         </th>
                     </tr>
                 </thead>
