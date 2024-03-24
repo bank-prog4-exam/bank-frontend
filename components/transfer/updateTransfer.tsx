@@ -1,6 +1,16 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { v4 as uuidv4 } from 'uuid'; 
+import { useUrl } from 'nextjs-current-url';
+import { Metadata } from 'next';
+
+
+
+export const metadata: Metadata = {
+    title: 'Next.js - Coding Beauty',
+    description: 'Next.js Tutorials by Coding Beauty',
+  };
+
 
 interface TransferFormValues {
     id: string;
@@ -15,12 +25,13 @@ interface TransferFormValues {
     label: string;
 }
 
-export function RegisterTransfer() {
+export function UpdateTransfer() {
     const { register, handleSubmit } = useForm<TransferFormValues>();
+    const { pathname} = useUrl() ?? {};
+    const id = pathname ? pathname.substring(10) : "";
 
     const onSubmit: SubmitHandler<TransferFormValues> = async (data) => {
         try {
-            const id = uuidv4();
             const updatedFormData = { ...data, id };
 
             console.log("Transfer Data:", updatedFormData);
@@ -37,7 +48,7 @@ export function RegisterTransfer() {
                 throw new Error('Failed to add transfer');
             }
 
-            alert('Transfer added successfully!');
+            alert('Update Transfer successfully!');
             
         } catch (error) {
             console.error('Error adding transfer:', error);
