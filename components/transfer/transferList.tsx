@@ -60,9 +60,6 @@ export default function TableTransfer() {
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                         <th scope="col" className="px-6 py-3">
-                            Transfer ID
-                        </th>
-                        <th scope="col" className="px-6 py-3">
                             Sender Account ID
                         </th>
                         <th scope="col" className="px-6 py-3">
@@ -97,7 +94,6 @@ export default function TableTransfer() {
                 <tbody>
                     {data.map(transfer => (
                         <tr key={transfer.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                            <td className="px-6 py-4">{transfer.id}</td>
                             <td className="px-6 py-4">{transfer.idSenderAccount}</td>
                             <td className="px-6 py-4">{transfer.idReceiverAccount}</td>
                             <td className="px-6 py-4">{transfer.transferAmount}</td>
