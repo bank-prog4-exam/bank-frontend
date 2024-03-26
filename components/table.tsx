@@ -10,6 +10,7 @@ interface Account {
     firstName: string,
     dateOfBirth: Date,
     monthlyNetSalary: number,
+    bankName: string,
     uniqueAccountNumber: string,
     overdraftStatus: boolean,
     principalBalance: number,
@@ -61,6 +62,9 @@ export default function TableAccount() {
                             Net salary month
                         </th>
                         <th scope="col" className="px-6 py-3">
+                            Bank Name
+                        </th>
+                        <th scope="col" className="px-6 py-3">
                             Unique account number
                         </th>
                         <th scope="col" className="px-6 py-3">
@@ -81,6 +85,7 @@ export default function TableAccount() {
                             <td className="px-6 py-4">{account.firstName}</td>
                             <td className="px-6 py-4">{new Date(account.dateOfBirth).toLocaleDateString()}</td>
                             <td className="px-6 py-4">${account.monthlyNetSalary}</td>
+                            <td className="px-6 py-4">{account.bankName}</td>
                             <td className="px-6 py-4">{account.uniqueAccountNumber}</td>
                             <td className="px-6 py-4">${account.principalBalance}</td>
                             <td className="px-6 py-4">${account.lastOverdraftActivity}</td>

@@ -20,6 +20,7 @@ interface FormValues {
     firstName: string;
     dateOfBirth: string;
     monthlyNetSalary: number;
+    bankName:string;
     uniqueAccountNumber: string;
     overdraftStatus: string;
     principalBalance: number;
@@ -49,6 +50,7 @@ export function UpdateAccount() {
                 setValue("firstName", data.firstName);
                 setValue("dateOfBirth", data.dateOfBirth);
                 setValue("monthlyNetSalary", data.monthlyNetSalary);
+                setValue("bankName",data.bankName)
                 setValue("uniqueAccountNumber", data.uniqueAccountNumber);
                 setValue("overdraftStatus", data.overdraftStatus);
                 setValue("principalBalance", data.principalBalance);
@@ -103,7 +105,10 @@ export function UpdateAccount() {
                 <input type="number" {...register("monthlyNetSalary")} placeholder="Monthly Net Salary" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
             </label>
             <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                <input type="text" {...register("uniqueAccountNumber")} placeholder="Unique Account Number" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+                <input type="text" {...register("bankName")} placeholder="Monthly Net Salary" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
+            </label>
+            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                <input type="text" {...register("uniqueAccountNumber")} placeholder="bank name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />
             </label>
             <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                 <select {...register("overdraftStatus")} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
