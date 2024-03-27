@@ -8,6 +8,7 @@ interface Transaction {
     transactionAmount: number,
     transactionType: string,
     reason: string,
+    reference:string,
     effectiveDate: Date,
     registrationDate: Date
 }
@@ -60,6 +61,9 @@ export default function TableTransaction() {
                             Reason
                         </th>
                         <th scope="col" className="px-6 py-3">
+                            Reference
+                        </th>
+                        <th scope="col" className="px-6 py-3">
                             Effective Date
                         </th>
                         <th scope="col" className="px-6 py-3">
@@ -78,6 +82,7 @@ export default function TableTransaction() {
                             <td className="px-6 py-4">{transaction.transactionAmount}</td>
                             <td className="px-6 py-4">{transaction.transactionType}</td>
                             <td className="px-6 py-4">{transaction.reason}</td>
+                            <td className="px-6 py-4">{transaction.reference}</td>
                             <td className="px-6 py-4">{new Date(transaction.effectiveDate).toLocaleString()}</td>
                             <td className="px-6 py-4">{new Date(transaction.registrationDate).toLocaleString()}</td>
                             <td className="px-6 py-4">
