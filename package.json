@@ -9,8 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@devexpress/dx-react-chart": "^4.0.8",
+    "@devexpress/dx-react-chart-bootstrap4": "^4.0.8",
+    "@devexpress/dx-react-chart-material-ui": "^4.0.8",
+    "@devexpress/dx-react-core": "^4.0.8",
     "apexcharts": "^3.48.0",
     "axios": "^1.6.8",
+    "chart.js": "^4.4.2",
     "cors": "^2.8.5",
     "cors-anywhere": "^0.4.4",
     "crypto": "^1.0.1",
@@ -21,6 +26,8 @@
     "nextjs-current-url": "^1.0.3",
     "node-fetch": "^3.3.2",
     "react": "^18",
+    "react-apexcharts": "^1.4.1",
+    "react-chartjs-2": "^5.2.0",
     "react-datepicker": "^6.4.0",
     "react-dom": "^18",
     "react-hook-form": "^7.51.1",
